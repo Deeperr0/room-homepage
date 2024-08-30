@@ -1,0 +1,49 @@
+@use "sass:math";
+@use "../../variables" as *;
+.discover {
+  display: flex;
+  flex-direction: column;
+  padding-left: math.div(105px, 600px) * 100%;
+  padding-right: math.div(105px, 600px) * 100%;
+  justify-content: center;
+  text-align: left;
+  position: relative;
+  gap: 32px;
+}
+.discover__title {
+  font-size: 36px;
+}
+.discover__text {
+  font-size: 16px;
+  line-height: 150%;
+  color: $dark-gray;
+}
+.discover__link {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 8px;
+}
+.discover__link svg {
+  margin-left: 32px;
+}
+
+.slider__buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25%;
+  height: 80px;
+}
+.slider__buttons__left,
+.slider__buttons__right {
+  background-color: black;
+  width: 50%;
+  height: 100%;
+  border: 0;
+}
+.slider__buttons__left:hover,
+.slider__buttons__right:hover,
+.discover__link:hover {
+  cursor: pointer;
+  opacity: 50%;
+}

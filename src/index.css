@@ -1,68 +1,188 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.navbar {
+  display: flex;
+  gap: 55px;
+  align-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.navbar .links {
+  display: flex;
+  color: white;
+  gap: 55px;
+  list-style-type: none;
+  font-size: 18px;
+}
+.navbar .links__item {
+  position: relative;
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+  line-height: 150%;
+}
+.navbar .links__item:hover {
+  cursor: pointer;
+}
+.navbar .links__item:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 50%;
+  padding: 0 auto;
+  display: none;
+  background-color: white;
+  transform: translateX(50%);
+}
+.navbar .links__item:hover:before {
+  display: block;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.discover {
+  display: flex;
+  flex-direction: column;
+  padding-left: 17.5%;
+  padding-right: 17.5%;
+  justify-content: center;
+  text-align: left;
+  position: relative;
+  gap: 32px;
 }
-a:hover {
-  color: #535bf2;
+
+.discover__title {
+  font-size: 36px;
+}
+
+.discover__text {
+  font-size: 16px;
+  line-height: 150%;
+  color: hsl(0, 0%, 63%);
+}
+
+.discover__link {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 8px;
+}
+
+.discover__link svg {
+  margin-left: 32px;
+}
+
+.slider__buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25%;
+  height: 80px;
+}
+
+.slider__buttons__left,
+.slider__buttons__right {
+  background-color: black;
+  width: 50%;
+  height: 100%;
+  border: 0;
+}
+
+.slider__buttons__left:hover,
+.slider__buttons__right:hover,
+.discover__link:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
+
+.hero {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 64px;
+  width: 100%;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding-left: 13.7931034483%;
+  padding-right: 13.7931034483%;
+  gap: 24px;
+}
+
+.about__title {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+.about__text {
+  font-size: 14px;
+  color: hsl(0, 0%, 63%);
+  line-height: 150%;
+}
+
+.homepage {
+  display: grid;
+  grid-template-rows: repeat(20, 1fr);
+  height: 100%;
+}
+
+.homepage__top {
+  display: grid;
+  grid-row: span 13;
+  grid-template-columns: repeat(10, 1fr);
+}
+.homepage__top .hero {
+  display: inline-flex;
+  display: -moz-inline-grid;
+  grid-column: span 6;
+}
+.homepage__top .discover {
+  display: inline-flex;
+  display: -moz-inline-grid;
+  grid-column: span 4;
+}
+
+.homepage__bottom {
+  display: grid;
+  grid-row: span 7;
+  grid-template-columns: repeat(10, 1fr);
+}
+.homepage__bottom .coffee__table {
+  display: inline-flex;
+  display: -moz-inline-grid;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  width: 100%;
+  height: 100%;
+}
+.homepage__bottom .about {
+  display: inline-flex;
+  display: -moz-inline-grid;
+  grid-column-start: 4;
+  grid-column-end: 8;
+}
+.homepage__bottom .chair {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  display: -moz-inline-grid;
+  grid-column-start: 8;
+  grid-column-end: 11;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "League Spartan", system-ui;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+html {
+  height: 100%;
+}/*# sourceMappingURL=index.css.map */

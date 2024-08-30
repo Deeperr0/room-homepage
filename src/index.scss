@@ -1,0 +1,19 @@
+@use "./components/Navbar/navbar" as navbar;
+@use "./components/Discover/discover" as discover;
+@use "./components/Hero/hero" as hero;
+@use "./components/About/about" as about;
+@use "./app" as app;
+$spartan: "League Spartan", system-ui;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: $spartan;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+html {
+  height: 100%;
+}
