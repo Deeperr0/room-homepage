@@ -1,6 +1,63 @@
+import { useState } from "react";
+
 export default function Navbar() {
+  function handleAnimation() {
+    const menu = document.querySelector(".mobile__menu");
+    if (menu.classList.contains("hidden")) {
+      menu.classList.remove("slide-out");
+      menu.classList.remove("hidden");
+      menu.classList.add("slide-in");
+    } else {
+      menu.classList.remove("slide-in");
+      menu.classList.add("slide-out");
+      setTimeout(() => menu.classList.add("hidden"), 300);
+    }
+  }
   return (
     <nav className="navbar">
+      <div className="mobile__menu slide-in hidden">
+        <svg
+          width="16"
+          height="16"
+          xmlns="http://www.w3.org/2000/svg"
+          onClick={() => handleAnimation()}
+        >
+          <path
+            d="M14.364.222l1.414 1.414L9.414 8l6.364 6.364-1.414 1.414L8 9.414l-6.364 6.364-1.414-1.414L6.586 8 .222 1.636 1.636.222 8 6.586 14.364.222z"
+            fill="#000"
+            fillRule="evenodd"
+            opacity=".201"
+          />
+        </svg>
+        <ul className="mobile__links">
+          <li className="links__item">
+            <a className="links__item__link">home</a>
+          </li>
+          <li className="links__item">
+            <a className="links__item__link">shop</a>
+          </li>
+          <li className="links__item">
+            <a className="links__item__link">about</a>
+          </li>
+          <li className="links__item">
+            <a className="links__item__link">contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <svg
+        width="20"
+        height="14"
+        xmlns="http://www.w3.org/2000/svg"
+        className="menu__button hidden"
+        onClick={() => handleAnimation()}
+      >
+        <path
+          d="M20 12v2H0v-2h20zm0-6v2H0V6h20zm0-6v2H0V0h20z"
+          fill="#FFF"
+          fillRule="evenodd"
+        />
+      </svg>
       <svg
         width="62"
         height="14"

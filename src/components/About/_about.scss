@@ -10,12 +10,32 @@
   gap: 24px;
 }
 .about__title {
-  font-size: 16px;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 8px;
 }
 .about__text {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: $dark-gray;
   line-height: 150%;
+}
+@media screen and (width <= 1000px) {
+  .about {
+    gap: 16px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .about__text {
+    font-size: 0.7rem;
+    line-height: 125%;
+  }
+}
+@media screen and (width <= 480px) {
+  .about__title {
+    font-size: 0.9rem;
+  }
+  .about {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }

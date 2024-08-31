@@ -23,6 +23,7 @@ function App() {
                 ? slides[currentSlide].discover_image?.desktop
                 : slides[currentSlide].discover_image?.mobile
             }
+            setCurrentSlide={setCurrentSlide}
           />
           <Discover
             title={slides[currentSlide].discover_title}

@@ -4,4 +4,30 @@
   background-size: cover;
   padding: 64px;
   width: 100%;
+  height: 100%;
+  position: relative;
+}
+.mobile__slider__buttons {
+  display: none !important;
+}
+@media screen and (width <= 480px) {
+  .hero {
+    height: 400px;
+    padding: 48px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .mobile__slider__buttons {
+    display: flex !important;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    height: 15%;
+  }
+  .mobile__slider__buttons {
+    .slider__buttons__left:hover,
+    .slider__buttons__right:hover {
+      opacity: 100%;
+    }
+  }
 }

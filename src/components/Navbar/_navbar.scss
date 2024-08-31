@@ -1,14 +1,19 @@
+.hidden {
+  display: none !important;
+}
+
 .navbar {
   display: flex;
   gap: 55px;
   align-items: center;
   height: fit-content;
+
   .links {
     display: flex;
     color: white;
     gap: 55px;
     list-style-type: none;
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   .links__item {
     position: relative;
@@ -33,5 +38,67 @@
   }
   .links__item:hover:before {
     display: block;
+  }
+}
+@media screen and (width <= 1000px) {
+  .navbar {
+    .links {
+      gap: 25px;
+    }
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-out {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@media screen and (width <= 480px) {
+  .menu__button {
+    display: block !important;
+  }
+  .navbar {
+    width: 60%;
+    justify-content: space-between;
+    .links {
+      display: none;
+    }
+  }
+  .mobile__menu {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    padding: 10%;
+    align-items: center;
+    justify-content: space-between;
+    animation-name: slide-in;
+    animation-duration: 0.3s;
+  }
+  .slide-in {
+    animation-name: slide-in;
+    animation-duration: 0.3s;
+  }
+  .slide-out {
+    animation-name: slide-out;
+    animation-duration: 0.3s;
+  }
+  .mobile__links {
+    display: flex;
+    gap: 20px;
   }
 }

@@ -5,16 +5,18 @@
   flex-direction: column;
   padding-left: math.div(105px, 600px) * 100%;
   padding-right: math.div(105px, 600px) * 100%;
-  justify-content: center;
+  justify-content: start;
+  padding-top: 15%;
+  padding-bottom: 25%;
   text-align: left;
   position: relative;
   gap: 32px;
 }
 .discover__title {
-  font-size: 36px;
+  font-size: 2.25rem;
 }
 .discover__text {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 150%;
   color: $dark-gray;
 }
@@ -22,6 +24,7 @@
   color: black;
   text-decoration: none;
   letter-spacing: 8px;
+  line-height: 150%;
 }
 .discover__link svg {
   margin-left: 32px;
@@ -32,7 +35,7 @@
   bottom: 0;
   left: 0;
   width: 25%;
-  height: 80px;
+  height: 20%;
 }
 .slider__buttons__left,
 .slider__buttons__right {
@@ -46,4 +49,30 @@
 .discover__link:hover {
   cursor: pointer;
   opacity: 50%;
+}
+@media screen and (width <= 1000px) {
+  .discover {
+    gap: 16px;
+    padding-bottom: 40px;
+  }
+  .discover__title {
+    font-size: 1.75rem;
+  }
+  .discover__text {
+    font-size: 0.9rem;
+    line-height: 125%;
+  }
+  .discover__link svg {
+    margin-left: 16px;
+  }
+}
+
+@media screen and (width <= 480px) {
+  .slider__buttons {
+    display: none;
+  }
+  .discover {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }
