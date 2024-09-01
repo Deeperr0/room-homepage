@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/room-homepage-responsive-landing-page-using-react-iUEMUMoMcD)
 - Live Site URL: [Live Site](https://room-homepage-landing-page.netlify.app)
 
 ## My process
